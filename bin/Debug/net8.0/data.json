@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "name": "Newspaper A",
+      "demographicExposure": [
+        {
+          "group": "Women",
+          "percentage": 60
+        },
+        {
+          "group": "man",
+          "percentage": 40
+        }
+      ],
+      "actualExposure": 300000,
+      "totalPossibleExposure": 500000
+    },
+    {
+      "id": 2,
+      "name": "Newspaper B",
+      "demographicExposure": [
+        {
+          "group": "Women",
+          "percentage": 60
+        },
+        {
+          "group": "nam",
+          "percentage": 40
+        }
+      ],
+      "actualExposure": 350000,
+      "totalPossibleExposure": 500000
+    }
+  ]
