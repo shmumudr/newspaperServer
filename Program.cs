@@ -52,10 +52,15 @@ app.MapGet("/data/{id}", (string id) =>
         var items = JsonSerializer.Deserialize<List<Indox>>(jsonContent, options);
 
 
-        var matchedItem = items.FirstOrDefault(i => i.Id == idInt);
+    if (!int.TryParse(id, out int idInt))
+    {
+        return Results.BadRequest("004");
+    }
 
+    var matchedItem = items.FirstOrDefault(i => i.Id == idInt);
 
-        return Results.Json(new List<Indox> { matchedItem });
+    return matchedItem is not null ? Results.Json(new List<Indox> { matchedItem }) : Results.NotFound();
+
 
 });
 
